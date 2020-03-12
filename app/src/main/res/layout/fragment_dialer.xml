@@ -1,6 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    android:padding="@dimen/activity_horizontal_margin">
 
-</LinearLayout>
+    <EditText
+        android:id="@+id/etCall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tableLayout"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/btnCallBackSpace"
+        android:textSize="@dimen/dialer_text_size" />
+
+    <ImageButton
+        android:id="@+id/btnCallBackSpace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tableLayout"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/etCall"
+        android:src="@drawable/ic_backspace_outline_black_24dp" />
+
+    <Button
+        android:id="@+id/btnCall"
+        style="@style/DialerButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="@string/call"
+        android:textSize="30sp" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnCall"
+        android:stretchColumns="*">
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/btnDialer1"
+                style="@style/DialerButton"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/btnDialer2"
+                style="@style/DialerButton"
+                android:text="2" />
+
+            <Button
+                android:id="@+id/btnDialer3"
+                style="@style/DialerButton"
+                android:text="3" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/btnDialer4"
+                style="@style/DialerButton"
+                android:text="4" />
+
+            <Button
+                android:id="@+id/btnDialer5"
+                style="@style/DialerButton"
+                android:text="5" />
+
+            <Button
+                android:id="@+id/btnDialer6"
+                style="@style/DialerButton"
+                android:text="6" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/btnDialer7"
+                style="@style/DialerButton"
+                android:text="7" />
+
+            <Button
+                android:id="@+id/btnDialer8"
+                style="@style/DialerButton"
+                android:text="8" />
+
+            <Button
+                android:id="@+id/btnDialer9"
+                style="@style/DialerButton"
+                android:text="9" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/btnDialerStar"
+                style="@style/DialerButton"
+                android:text="*" />
+
+            <Button
+                android:id="@+id/btnDialer0"
+                style="@style/DialerButton"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/btnDialerHashmark"
+                style="@style/DialerButton"
+                android:text="#" />
+
+        </TableRow>
+
+    </TableLayout>
+
+</RelativeLayout>

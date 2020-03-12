@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Launcher</string>
+    <string name="hello">Helo</string>
+    <string name="call">Hívás</string>
 </resources>
